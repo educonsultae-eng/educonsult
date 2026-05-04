@@ -105,7 +105,7 @@ export default function MediaAdminPage() {
                     <div className="p-2">
                       <p className="text-xs text-slate-600 font-medium truncate">{item.name}</p>
                       <p className="text-xs text-slate-400">{formatSize(item.size)}</p>
-                      <p className="text-xs text-slate-400">{formatDate(item.createdAt)}</p>
+                      <p className="text-xs text-slate-400">{item.createdAt ? formatDate(item.createdAt) : '—'}</p>
                     </div>
                     <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                       <button

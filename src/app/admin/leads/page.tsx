@@ -93,7 +93,7 @@ export default function LeadsAdminPage() {
                           )}
                         </div>
                       </td>
-                      <td className="table-cell text-slate-500 whitespace-nowrap text-xs">{formatDate(lead.createdAt)}</td>
+                      <td className="table-cell text-slate-500 whitespace-nowrap text-xs">{lead.createdAt ? formatDate(lead.createdAt) : '—'}</td>
                       <td className="table-cell">
                         <select
                           value={lead.status}
@@ -136,7 +136,7 @@ export default function LeadsAdminPage() {
                 ['Phone',    selected.phone ?? '—'],
                 ['School',   selected.school ?? '—'],
                 ['Position', selected.position ?? '—'],
-                ['Received', formatDate(selected.createdAt)],
+                ['Received', selected.createdAt ? formatDate(selected.createdAt) : '—'],
               ].map(([label, value]) => (
                 <div key={label}>
                   <p className="admin-label">{label}</p>

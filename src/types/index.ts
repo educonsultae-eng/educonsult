@@ -9,8 +9,8 @@ export interface IService {
   features: string[];
   isActive: boolean;
   order: number;
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export interface ITeamMember {
@@ -36,8 +36,8 @@ export interface IBlogPost {
   tags: string[];
   isPublished: boolean;
   publishedAt?: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export interface ILead {
@@ -51,7 +51,7 @@ export interface ILead {
   status: 'new' | 'contacted' | 'converted' | 'closed';
   source?: string;
   notes?: string;
-  createdAt: string;
+  createdAt?: string;
 }
 
 export interface ICaseStudy {
@@ -66,7 +66,7 @@ export interface ICaseStudy {
   image?: string;
   tags: string[];
   isPublished: boolean;
-  createdAt: string;
+  createdAt?: string;
 }
 
 export interface ISettings {
@@ -99,5 +99,5 @@ export interface IMedia {
   publicId: string;
   type: string;
   size: number;
-  createdAt: string;
+  createdAt?: string;
 }
