@@ -4,7 +4,7 @@ import SafeImage from '@/components/public/SafeImage';
 import CTASection from '@/components/public/CTASection';
 import TeamCard from '@/components/public/TeamCard';
 import { ITeamMember } from '@/types';
-import { CheckCircle, Target, Eye, ArrowRight, Mic, Globe } from 'lucide-react';
+import { CheckCircle, Target, Eye, ArrowRight, Mic, Globe, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us — Shamaila Shah & EduConsult',
@@ -192,8 +192,8 @@ export default async function AboutPage() {
                 {[
                   { value: '15+', label: 'Years in Education' },
                   { value: '2',   label: 'International Conferences' },
-                  { value: '16',  label: 'Years GEMS Outstanding' },
-                  { value: '5',   label: 'GCC Countries' },
+                  { value: '60',  label: 'Schools in DEWA Cup' },
+                  { value: '1st', label: 'DEWA Business Cup 2019' },
                 ].map(({ value, label }) => (
                   <div key={label} className="bg-white rounded-2xl p-5 text-center shadow-sm">
                     <div className="text-3xl font-extrabold text-primary-800 mb-1">{value}</div>
@@ -245,8 +245,54 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Awards & Recognition */}
       <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold text-primary-700 uppercase tracking-widest">Awards & Recognition</span>
+            <h2 className="section-title mt-2">Recognised for Excellence</h2>
+            <p className="section-subtitle mx-auto">A track record of achievement — in the classroom, on the stage, and across the GCC.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-primary-50 to-blue-50 border border-primary-100 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <Award size={22} className="text-primary-700" />
+              </div>
+              <div className="text-xs font-bold text-primary-600 uppercase tracking-wide mb-1">1st Place + Best AI Award</div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">DEWA Business Cup Challenge 2019</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Mentored Team Carv at GEMS Wellington International School to first place — and the Best AI Solution Award — out of 1,200 students from 60 UAE schools. The winning solution demonstrated an innovative application of artificial intelligence to a real-world business case set by DEWA.
+              </p>
+              <p className="text-xs text-slate-400 mt-3">As reported by Gulf News · November 2019</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <Mic size={22} className="text-primary-700" />
+              </div>
+              <div className="text-xs font-bold text-primary-600 uppercase tracking-wide mb-1">International Speaker · 2025</div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">IB Global Conference, The Hague</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Invited to present at the International Baccalaureate&apos;s flagship global conference, sharing data-driven research showing GEMS Wellington International School IB CORE scores consistently above the global average from 2022–2025.
+              </p>
+              <p className="text-xs text-slate-400 mt-3">IB Global Conference · October 2025</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <CheckCircle size={22} className="text-primary-700" />
+              </div>
+              <div className="text-xs font-bold text-primary-600 uppercase tracking-wide mb-1">Thought Leader · 2025</div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">BSME TeacherCon DXB25 Panelist</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Selected as a panelist at the region&apos;s most prestigious teacher conference to discuss &ldquo;The Human Edge in the Age of AI&rdquo; alongside senior leaders from Amity International School, Fortes Education, and Arcadia British School.
+              </p>
+              <p className="text-xs text-slate-400 mt-3">BSME TeacherCon DXB25 · April 2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="section-padding bg-slate-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="section-title">What We Stand For</h2>
