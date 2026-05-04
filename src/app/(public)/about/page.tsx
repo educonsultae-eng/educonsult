@@ -174,16 +174,16 @@ export default async function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-xs font-bold text-primary-700 uppercase tracking-widest">Our Story</span>
-              <h2 className="text-3xl font-bold text-slate-900 mt-2 mb-6">From the Classroom to Consulting</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mt-2 mb-6">From London to Dubai — A Global Education Career</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  EduConsult was founded by Shamaila Shah after years of leading curriculum innovation at GEMS Wellington International School, Dubai — one of the UAE&apos;s Outstanding IB schools. Having developed strategies that produced measurable, above-global-average results, Shamaila was compelled to share these approaches more broadly.
+                  Shamaila Shah&apos;s journey in education began in the UK, where she served as <strong>Education Development Manager at the Chartered Institute for Securities &amp; Investment (CISI)</strong> in London — working at a national policy level to shape financial education qualifications and secure their recognition by leading universities including Henley Business School, University of Reading.
                 </p>
                 <p>
-                  Invited to speak at the IB Global Conference 2025 in The Hague, and recognised as a thought leader on AI in education at BSME&apos;s TeacherCon DXB25, Shamaila brings globally validated expertise directly to GCC schools.
+                  Bringing that breadth of perspective to the UAE, Shamaila joined GEMS Wellington International School, Dubai — one of the UAE&apos;s Outstanding IB schools — where she led curriculum innovation that produced measurable, above-global-average results. Mentoring students to win the DEWA Business Cup Challenge (including the Best AI Solution Award) out of 1,200 students from 60 UAE schools became one of many highlights.
                 </p>
                 <p>
-                  Today, EduConsult works with school leaders, curriculum teams, and education groups across Dubai, Abu Dhabi, Saudi Arabia, and the wider GCC — delivering the kind of bespoke, research-backed support that produces lasting results.
+                  Invited to speak at the IB Global Conference 2025 in The Hague, and recognised as a thought leader on AI in education at BSME&apos;s TeacherCon DXB25, Shamaila founded EduConsult to bring this globally validated expertise directly to GCC schools.
                 </p>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default async function AboutPage() {
             <h2 className="section-title mt-2">Recognised for Excellence</h2>
             <p className="section-subtitle mx-auto">A track record of achievement — in the classroom, on the stage, and across the GCC.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="bg-gradient-to-br from-primary-50 to-blue-50 border border-primary-100 rounded-2xl p-6">
               <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
                 <Award size={22} className="text-primary-700" />
@@ -286,6 +286,17 @@ export default async function AboutPage() {
                 Selected as a panelist at the region&apos;s most prestigious teacher conference to discuss &ldquo;The Human Edge in the Age of AI&rdquo; alongside senior leaders from Amity International School, Fortes Education, and Arcadia British School.
               </p>
               <p className="text-xs text-slate-400 mt-3">BSME TeacherCon DXB25 · April 2025</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-6">
+              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                <Globe size={22} className="text-primary-700" />
+              </div>
+              <div className="text-xs font-bold text-primary-600 uppercase tracking-wide mb-1">UK Policy · 2016</div>
+              <h3 className="font-bold text-slate-900 text-lg mb-2">CISI × Henley Business School</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                As Education Development Manager at the Chartered Institute for Securities &amp; Investment (CISI), London, Shamaila secured formal recognition of the CISI Level 3 qualification by Henley Business School, University of Reading — one of the UK&apos;s top-ranked triple-accredited business schools.
+              </p>
+              <p className="text-xs text-slate-400 mt-3">Henley Business School · October 2016</p>
             </div>
           </div>
         </div>
