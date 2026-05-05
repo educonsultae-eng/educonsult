@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import BlogCard from '@/components/public/BlogCard';
 import { IBlogPost } from '@/types';
+import { STATIC_BLOG_POSTS } from '@/lib/static-blog';
 
 export const metadata: Metadata = {
   title: 'Insights & Blog',
@@ -11,11 +12,12 @@ async function getPosts(): Promise<IBlogPost[]> {
   try {
     const base = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000';
     const res = await fetch(`${base}/api/blog`, { next: { revalidate: 60 } });
-    if (!res.ok) return [];
+    if (!res.ok) return STATIC_BLOG_POSTS;
     const data = await res.json();
-    return data.posts ?? [];
+    const posts: IBlogPost[] = data.posts ?? [];
+    return posts.length > 0 ? posts : STATIC_BLOG_POSTS;
   } catch {
-    return [];
+    return STATIC_BLOG_POSTS;
   }
 }
 
@@ -38,18 +40,11 @@ export default async function BlogPage() {
 
       <section className="section-padding bg-white">
         <div className="container-custom">
-          {posts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {posts.map((post) => (
-                <BlogCard key={post._id} post={post} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-24 text-slate-400">
-              <p className="text-lg mb-2">No articles yet.</p>
-              <p className="text-sm">Check back soon for expert insights from our team.</p>
-            </div>
-          )}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {posts.map((post) => (
+              <BlogCard key={post._id} post={post} />
+            ))}
+          </div>
         </div>
       </section>
     </>

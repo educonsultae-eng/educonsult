@@ -6,16 +6,17 @@ import { Calendar, User, ArrowLeft, Tag } from 'lucide-react';
 import { IBlogPost } from '@/types';
 import { formatDate } from '@/lib/utils';
 import CTASection from '@/components/public/CTASection';
+import { getStaticPost } from '@/lib/static-blog';
 
 async function getPost(slug: string): Promise<IBlogPost | null> {
   try {
     const base = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000';
     const res = await fetch(`${base}/api/blog/${slug}`, { next: { revalidate: 60 } });
-    if (!res.ok) return null;
+    if (!res.ok) return getStaticPost(slug) ?? null;
     const data = await res.json();
-    return data.post ?? null;
+    return data.post ?? getStaticPost(slug) ?? null;
   } catch {
-    return null;
+    return getStaticPost(slug) ?? null;
   }
 }
 
